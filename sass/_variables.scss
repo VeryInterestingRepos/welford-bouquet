@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400i|Martel+Sans:200|Raleway:200');
+
+$font1: 'Raleway', sans-serif;
+$font1: 'Martel Sans', sans-serif;
+$font2: 'Crimson Text', serif;
+$grey: #e5e5e5;
+
+@mixin flex-between() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

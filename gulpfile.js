@@ -3,14 +3,14 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     sass = require('gulp-sass');
 
-gulp.task('sass', function(done) {
-    gulp.src('sass/style.scss')
-        .pipe(sass({style: 'expanded'}))
+gulp.task('sass', function() {
+    return gulp.src('sass/style.scss')
+    .pipe(sass())
     .on('error', gutil.log)
     .pipe(gulp.dest('public/css'))
-    done();
 });
 
 gulp.task('watch', function() {
     gulp.watch('sass/*.scss', gulp.series('sass'));
 });
+

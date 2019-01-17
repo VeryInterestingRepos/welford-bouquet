@@ -1,8 +1,74 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400i|Martel+Sans:200|Raleway:200');
+@import "./_variables";
 
 body {
-    font-size: 21px;
+    font-size: 14pt;
+    font-family: $font1;
 }
+
+header.main-header {
+    width: 100%;
+    border-bottom: 3px solid $grey;
+    h1.site-header {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-family: $font1;
+        font-size: 1.4em;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 30px 0px 20px 0px;
+    }
+    nav.main-nav {
+        @include flex-between();
+        width: 1180px;
+        margin: 0px auto 10px auto;
+        ul.main-nav__main-menu {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 0px;
+            padding: 0px;
+            height: 33px;
+            li {
+                list-style: none;
+                padding: 0px 20px;
+                a {
+                    position: relative;
+                    outline: none;
+                    color: black;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    padding-bottom: 5px;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0px;
+                        height: 2px;
+                        background-color: $grey;
+                        transition: 0.3s;
+                        width: 0px;
+                    }
+                    &:hover:after {
+                        width: 100%;
+                    } 
+                }
+            }
+        }
+        a.icon-link {
+            width: 33px;
+            height: 33px;
+            text-decoration: none;
+            background-repeat: no-repeat;
+            img {
+                width: 33px;
+                height: 33px;
+            }
+        }
+    }
+}
+
 
 h1.homepage {
     font-family: 'Martel Sans', sans-serif;
@@ -13,7 +79,11 @@ h1.homepage {
 
 .sub-header {
     display: block;
-    font-family: 'Crimson Text', serif;
+    font-family: $font2;
     font-size: 1.5em;
     text-align: center;
+}
+
+h5 {
+    color: pink;
 }
