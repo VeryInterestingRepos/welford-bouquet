@@ -135,7 +135,7 @@ header.main-header {
 }
 
 .small-block-holder {
-    @include flex-evenly();
+    @include flex-between();
     position: relative;
     flex-wrap: wrap;
     max-width: $page-width;
@@ -162,19 +162,6 @@ header.main-header {
                 border: 1px solid $grey;
                 padding: 20px 0px;
             }
-            .text-holder__main-header {
-                // color: $green;
-                // font-weight: bold;
-                // text-transform: uppercase;
-                // font-size: 1.1em;
-                // font-family: $font1;
-                // margin-bottom: 10px;
-            }
-            .text-holder__sub-header {
-                // color: $grey-dark;
-                // font-size: 1.1em;
-                // font-family: $font2;
-            }
         }
     }
     .block--image1 {
@@ -193,9 +180,89 @@ header.main-header {
 .text-break {
     max-width: $page-width;
     text-align: center;
-    margin: 60px 0px;
+    margin: 60px auto;
     .text-break__main-header {
         color: black;
         font-size: 1.1em;
+    }
+}
+
+.favourites {
+    @include flex-between();
+    .small-block-holder__block {
+        width: 24%;
+        min-width: 240px;
+        min-height: 330px;
+        background-position: bottom;
+        margin-bottom: 60px;
+        .block__text-holder {
+            top: 80%;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            padding: 5px;
+            background-color: white;
+            box-sizing: border-box;
+            .text-holder__border {
+                @include flex-center-text();
+                border: none;
+                padding: 10px 0px;
+                .main-header {
+                    font-size: 0.8em;
+                    color: black;
+                    margin: 15px 0px 5px 0px;
+                    line-height: 1em;
+                }
+                .sub-header {
+                    font-family: $font1;
+                    font-style: normal;
+                    font-weight: bold;
+                    .old-price {
+                        text-decoration: line-through;
+                    }
+                    .new-price {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+    .favourites1 {
+        background-image: url(../images/monika-grabkowska-664428-unsplash.jpg);  
+    }
+    .favourites2 {
+        background-image: url(../images/tanalee-youngblood-344759-unsplash.jpg);  
+    }
+    .favourites3 {
+        background-image: url(../images/alexandra-gorn-328026-unsplash.jpg);  
+    }
+    .favourites4 {
+        background-image: url(../images/christie-kim-769380-unsplash.jpg);  
+    }
+}
+
+footer.main-footer {
+    nav.footer-nav {
+        text-align: center;
+        width: 100%;
+        border-top: 2px solid $grey;
+        border-bottom: 2px solid $grey;
+        padding: 9px 0px 4px 0px;
+        ul {
+            margin: 0px;
+            li {
+                display: inline;
+                list-style-type: none;
+                margin-right: 60px;
+                &last-of-type {
+                    margin-right: 0px;
+                }
+                a {
+                    color: $grey-dark;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
     }
 }
